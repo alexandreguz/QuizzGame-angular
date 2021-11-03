@@ -1,0 +1,17 @@
+<div *ngIf="!gameOverState">
+<p>
+    {{question.question}}
+</p>
+<button 
+        class="btn btn-primary mx-3" (click)="doAnswer(idx)" 
+        *ngFor="let c of question.content; let idx=index" 
+        [disabled]="selectedAnswerIndex">{{c}}
+</button>
+
+</div>
+<div *ngIf="gameOverState">
+    {{gameOverMessage}}
+</div>
+
+
+

@@ -1,0 +1,6 @@
+<div class="row">
+<app-question-item  *ngFor="let q of selectedQuestions let idx=index"  class="question col-12" 
+[index]="idx" [question]="q" [ngClass]="{'active':activeQuestionIndex==idx}" (anwerQuestion)=onAnswer($event)>
+    [question.question]="q"
+</app-question-item>
+</div>
